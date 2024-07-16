@@ -1,0 +1,12 @@
+---
+import Header from '../components/Header.astro'
+import { Shoping } from '../components/Shoping'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Equipate - The Boxing House">
+  <Header />
+  <div class="pt-[200px]">
+    <Shoping client:load/>
+  </div>
+</Layout>

@@ -1,0 +1,75 @@
+---
+import Love from './Love.astro'
+import Instagram from './Instagram.astro'
+import Facebook from './Facebook.astro'
+import Tiktok from './Tiktok.astro'
+---
+
+<footer
+  class="from-[#d82828] bg-gradient-to-r to-[#1A2F81] text-white lg:px-10 px-4 pb-4 pt-3 flex justify-between items-center flex-col rounded-t-2xl"
+>
+  <div
+    class="flex justify-between items-center w-full flex-col lg:flex-row lg:gap-0 gap-4"
+  >
+    <div class="flex justify-start items-center gap-2 flex-grow basis-0">
+      <figure class="w-[100px]">
+        <img src="/logo_box.png" alt="" />
+      </figure>
+      <span class="font-medium text-3xl font-Bebas">The Boxing House</span>
+    </div>
+    <div class="flex justify-start items-center font-Bebas lg:text-2xl text-lg">
+      <ul class="flex justify-center items-center gap-6 [&>li]:cursor-pointer">
+        <li><a href="#boxeadores">BOXEADORES</a></li>
+        <li><a href="#encuentranos">ENCUENTRANOS</a></li>
+        <li>
+          <a target="_blank" href="#calendario">CALENDARIO</a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="flex justify-end items-end text-black flex-grow basis-0 flex-col"
+    >
+      <div
+        class="flex justify-center items-center flex-col text-white text-2xl font-Bebas lg:-rotate-3"
+      >
+        <span>TU MEJOR OPCIÓN PARA</span>
+        <span class="text-[#ED0505]">BOXEAR</span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex justify-between items-center w-full mt-4 flex-col lg:flex-row lg:gap-0 gap-2"
+  >
+    <div class="font-Bebas lg:flex-grow lg:basis-0">
+      2024 The Boxing House - Todos los derechos reservados
+    </div>
+    <div class="font-Bebas flex gap-1 lg:ml-[100px] lg:order-none order-3">
+      <span>Hecho con</span>
+      <Love />
+      <span>By DeCero</span>
+    </div>
+    <div class="text-lg font-Bebas flex justify-end lg:flex-grow gap-1">
+      <a
+        class="cursor-pointer"
+        href="https://www.instagram.com/clubdeportivotheboxinghouse?igsh=bnJqMDl5NGVpOXFy"
+        target="_blank"
+      >
+        <Instagram />
+      </a>
+      <a
+        class="cursor-pointer"
+        href="https://www.facebook.com/share/VYupohrFqzCZ12Ua/?mibextid=qi2Omg"
+        target="_blank"
+      >
+        <Facebook />
+      </a>
+      <a
+        class="cursor-pointer"
+        href="https://www.tiktok.com/@theboxinghouseof?_t=8o3iDSw2AVC&_r=1"
+        target="_blank"
+      >
+        <Tiktok />
+      </a>
+    </div>
+  </div>
+</footer>

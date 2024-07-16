@@ -1,0 +1,64 @@
+<section class="flex lg:justify-around justify-center flex-col lg:flex-row items-center lg:px-24 px-4 py-48 lg:gap-0 gap-8">
+  <div class="flex gap-8 flex-col text-white">
+    <div class="flex flex-col lg:text-6xl font-bold font-Friends lg:gap-4 text-[44px]">
+      <span class="inner-shadow" data-text="SOMOS">SOMOS</span>
+      <span class="text-container lg:text-6xl text-4xl" data-text="THE BOXING HOUSE"
+        >THE BOXING HOUSE</span
+      >
+    </div>
+    <p class="lg:max-w-[700px] text-3xl font-Bebas w-full text-justify">
+      Bienvenidos a The Boxing House, donde la dedicación y el esfuerzo se unen
+      con la pasión y el coraje. Aquí no solo nos entrenamos para ser fuertes
+      físicamente, sino también para fortalecer nuestra mente y espíritu. Nos
+      apoyamos mutuamente, empujándonos a superar nuestros límites y alcanzar
+      nuestras metas.
+    </p>
+  </div>
+  <figure
+    class="max-w-[850px] p-3 bg-gradient-to-r from-[#ED0505] to-[#1A2F81] rounded-2xl"
+  >
+    <img
+      src="foto_team.avif"
+      alt="Equipo de The Boxing House"
+      class="w-full rounded-xl"
+      draggable="false"
+    />
+  </figure>
+</section>
+<style>
+  .inner-shadow {
+    position: relative;
+    color: #fff;
+  }
+
+  .inner-shadow::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    z-index: -1;
+    filter: blur(2px);
+    clip-path: inset(0 0 0 0);
+  }
+
+  .text-container {
+    color: #ed0505;
+    position: relative;
+  }
+
+  .text-container::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    z-index: -1;
+    filter: blur(2px);
+    clip-path: inset(0 0 0 0);
+  }
+</style>

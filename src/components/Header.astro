@@ -1,0 +1,82 @@
+---
+import Bars from './Bars.astro'
+import Phone from './Phone.astro'
+---
+
+<header
+  class="flex justify-center items-center w-full fixed lg:my-14 my-8 z-[999]"
+>
+  <ul
+    class="fixed bg-[#eb4034] h-[200%] left-0 top-0 lg:hidden w-[60%] z-[999] p-4 flex justify-start items-start flex-col text-white gap-3 text-lg rounded-r-lg -translate-x-full transition-all"
+    id="navbar"
+  >
+    <span class="absolute right-6 cursor-pointer" id="close">X</span>
+    <li><a href="#boxeadores">BOXEADORES</a></li>
+    <li><a href="#encuentranos">ENCUENTRANOS</a></li>
+    <li><a href="#contactanos">CONTÁCTANOS</a></li>
+    <li><a href="/equipate">EQUIPATE</a></li>
+  </ul>
+  <nav
+    class="flex justify-between items-center bg-gradient-to-r px-10 py-2 lg:py-2 rounded-lg backdrop-blur-lg nav lg:m-0 mx-4 lg:w-auto w-full lg:max-h-[72px] max-h-14"
+  >
+    <div class="text-white lg:hidden cursor-pointer" id="bars">
+      <Bars />
+    </div>
+    <a href="/">
+      <figure class="lg:w-40 w-24 lg:hidden" id="menu">
+        <img src="/logo_box.png" alt="" />
+      </figure>
+    </a>
+    <div class="text-white lg:hidden cursor-pointer">
+      <a
+        href="https://wa.me/+51902640753?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios"
+      >
+        <Phone />
+      </a>
+    </div>
+    <ul
+      class="lg:flex justify-center items-center lg:gap-10 text-white font-semibold lg:text-lg cursor-pointer lg:max-h-14 lg:static hidden"
+    >
+      <li><a href="#boxeadores">BOXEADORES</a></li>
+      <li><a href="#encuentranos">ENCUENTRANOS</a></li>
+      <a href="/">
+        <figure class="lg:w-40 w-24" id="menu">
+          <img src="/logo_box.png" alt="" />
+        </figure>
+      </a>
+      <li>
+        <a
+          href="https://wa.me/+51902640753?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios"
+          >CONTÁCTANOS</a
+        >
+      </li>
+      <li><a href="/equipate">EQUIPATE</a></li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const equipate = document.getElementById('equipate')
+  const menu = document.getElementById('menu')
+  const navbar = document.getElementById('navbar')
+  const bars = document.getElementById('bars')
+  const close = document.getElementById('close')
+
+  bars.addEventListener('click', () => {
+    navbar.classList.toggle('-translate-x-full')
+  })
+
+  close.addEventListener('click', () => {
+    navbar.classList.toggle('-translate-x-full')
+  })
+</script>
+
+<style>
+  .nav {
+    background: linear-gradient(
+      to right,
+      rgba(239, 68, 68, 0.2),
+      rgba(59, 130, 246, 0.2)
+    );
+  }
+</style>

@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string
+}
+
+const { title } = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo_box.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .sombra {
+    mask-image: linear-gradient(black 80%, transparent);
+  }
+
+  body {
+    background-color: black;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @font-face {
+    font-family: 'Bebas';
+    src: url('/Bebas Neue Bold 700.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Friends';
+    src: url('/Future Friends 400.otf') format('truetype');
+  }
+
+  @media only screen and (max-width: 600px) {
+    html {
+      scrollbar-width: none;
+    }
+  }
+
+  html {
+    scrollbar-color: #555555 #2e2e2e;
+    scrollbar-width: thin;
+  }
+</style>

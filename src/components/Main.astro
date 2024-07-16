@@ -1,0 +1,130 @@
+---
+const imagenes = [
+  {
+    name: 'jose_inicio'
+  },
+  {
+    name: 'pedro_inicio'
+  },
+  {
+    name: 'nn_inicio'
+  }
+]
+
+const backImages = [
+  {
+    name: 'digo_inicio'
+  },
+  {
+    name: 'jairo_inicio'
+  }
+]
+---
+
+<main
+  class="h-screen flex justify-center lg:items-end items-center py-10 relative"
+>
+  <div class="flex justify-center items-center flex-col lg:mt-0 mt-40">
+    <div class="flex justify-center items-center flex-col relative">
+      <div
+        class="flex justify-center items-end absolute -translate-y-24 z-10 pointer-events-auto"
+      >
+        {
+          backImages.map((img) => (
+            <figure class="clip-path">
+              <img
+                src={`${img.name}.png`}
+                draggable="false"
+                alt=""
+                class="filtro-sombra imagen-efecto cursor-pointer lg:max-w-full lg:max-h-full lg:h-[620px] max-w-[150px] max-h-[200px] sombra"
+              />
+            </figure>
+          ))
+        }
+      </div>
+      <div class="flex justify-center items-end z-20 pointer-events-none ml-10">
+        {
+          imagenes.map((img) => (
+            <figure class="clip-path">
+              <img
+                src={`${img.name}.png`}
+                draggable="false"
+                alt=""
+                class={`lg:h-[650px] lg:min-w-full filtro-sombra h-[150px] min-w-[150px] min-h-[240px] -ml-10 ${img.name === 'pedro_inicio' ? 'min-w-[210px] min-h-[292px]' : 'imagen-efecto'} cursor-pointer sombra pointer-events-auto`}
+              />
+            </figure>
+          ))
+        }
+      </div>
+    </div>
+    <div
+      class="flex justify-center items-center flex-col-reverse font-Friends lg:gap-6 relative z-10 mt-2"
+    >
+      <h1 class="lg:text-7xl text-3xl text-[#ED0505]">CAMPEÓN</h1>
+      <span class="lg:text-4xl text-[20px] text-center text-white"
+        >ESTAMOS EN BUSCA DEL PRÓXIMO</span
+      >
+    </div>
+  </div>
+</main>
+
+<style>
+  main {
+    position: relative;
+    overflow: hidden;
+  }
+
+  main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('/boxing_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: 1;
+  }
+
+  main > div {
+    position: relative;
+    z-index: 10;
+  }
+
+  .imagen-efecto {
+    filter: grayscale(100%);
+    opacity: 0.95;
+    transition: all 0.3s ease;
+  }
+
+  .imagen-efecto:hover {
+    transform: translateY(-40px);
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .pointer-events-none {
+    pointer-events: none;
+  }
+
+  .pointer-events-auto {
+    pointer-events: auto;
+  }
+
+  .clip-path img {
+    clip-path: polygon(
+      30% 0%,
+      70% 0%,
+      80% 20%,
+      100% 20%,
+      100% 80%,
+      80% 100%,
+      20% 100%,
+      0% 80%,
+      0% 20%,
+      20% 0%
+    );
+  }
+</style>

@@ -1,0 +1,18 @@
+---
+import About from '../components/About.astro'
+import Header from '../components/Header.astro'
+import Main from '../components/Main.astro'
+import Layout from '../layouts/Layout.astro'
+import Footer from '../components/Footer.astro'
+import { Testimonios } from '../components/Testimonios'
+---
+
+<Layout title="The Boxing House">
+  <Header />
+  <Main />
+  <div class="bg-black py-10">
+    <About />
+    <Testimonios client:load />
+  </div>
+  <Footer/>
+</Layout>
