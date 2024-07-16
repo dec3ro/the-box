@@ -25,9 +25,9 @@ const backImages = [
   class="h-screen flex justify-center lg:items-end items-center py-10 relative"
 >
   <div class="flex justify-center items-center flex-col lg:mt-0 mt-40">
-    <div class="flex justify-center items-center flex-col relative">
+    <div class="flex justify-center items-center flex-col-reverse relative">
       <div
-        class="flex justify-center items-end absolute -translate-y-24 z-10 pointer-events-auto"
+        class="flex justify-center items-center absolute -translate-y-24 z-10 pointer-events-auto"
       >
         {
           backImages.map((img) => (
@@ -36,7 +36,7 @@ const backImages = [
                 src={`${img.name}.png`}
                 draggable="false"
                 alt=""
-                class="filtro-sombra imagen-efecto cursor-pointer lg:max-w-full lg:max-h-full lg:h-[620px] max-w-[150px] max-h-[200px] sombra"
+                class="filtro-sombra imagen-efecto cursor-pointer 2xl:h-[450px] 2xl:w-[320px] xl:h-[350px] xl:w-[250px] h-[200px] sombra"
               />
             </figure>
           ))
@@ -50,7 +50,7 @@ const backImages = [
                 src={`${img.name}.png`}
                 draggable="false"
                 alt=""
-                class={`lg:h-[650px] lg:min-w-full filtro-sombra h-[150px] min-w-[150px] min-h-[240px] -ml-10 ${img.name === 'pedro_inicio' ? 'min-w-[210px] min-h-[292px]' : 'imagen-efecto'} cursor-pointer sombra pointer-events-auto`}
+                class={`filtro-sombra h-[150px] min-w-[150px] min-h-[240px] ${img.name === 'pedro_inicio' ? '2xl:w-[380px] 2xl:h-[500px] xl:w-[280px] xl:h-[350px]' : 'imagen-efecto 2xl:h-[450px] 2xl:min-w-[350px] xl:w-[220px] xl:h-[300px]'} cursor-pointer sombra pointer-events-auto`}
               />
             </figure>
           ))
@@ -58,12 +58,14 @@ const backImages = [
       </div>
     </div>
     <div
-      class="flex justify-center items-center flex-col-reverse font-Friends lg:gap-6 relative z-10 mt-2"
+      class="flex justify-center items-center flex-col-reverse font-Friends lg:gap-6 xl:gap-2 relative z-10 mt-2"
     >
-      <h1 class="lg:text-7xl text-3xl text-[#ED0505]">CAMPEÓN</h1>
-      <span class="lg:text-4xl text-[20px] text-center text-white"
-        >ESTAMOS EN BUSCA DEL PRÓXIMO</span
-      >
+      <h1 class="xl:text-[87px] 2xl:text-[130px] 2xl:leading-[120px] xl:leading-[80px] text-[#ED0505] text-center text-[71px] leading-[70px]">
+        CAMPEÓN
+      </h1>
+      <span class="xl:text-2xl 2xl:text-4xl text-[20px] text-center text-white z-50">
+        ESTAMOS EN BUSCA DEL PRÓXIMO
+      </span>
     </div>
   </div>
 </main>

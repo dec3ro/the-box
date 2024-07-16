@@ -35,11 +35,10 @@ export const Shoping = () => {
       message += 'el vendas KM'
     }
 
-    // const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(
-    //   message
-    // )}`
-    // window.open(whatsappUrl, '_blank')
-    console.log(index + ' ' + message)
+    const whatsappUrl = `https://wa.me/${number}?text=${encodeURIComponent(
+      message
+    )}`
+    window.open(whatsappUrl, '_blank')
   }
 
   return (

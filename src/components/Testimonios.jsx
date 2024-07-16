@@ -8,47 +8,52 @@ import '../custom.css'
 export const Testimonios = () => {
   const [boxers, setBoxers] = useState([
     {
-      nombre: 'Diego Mendoza',
+      nombre: 'Diego',
+      apodo: 'La maquina',
+      apellido: 'mendoza',
       image: 'diego_pose',
       info: {
         edad: 16,
         peso: 80,
-        altura: 172,
+        altura: 172
       },
-      comentarios: ['HOY ES UN BUEN DÍA PARA MORIR']
+      comentarios: ['"HOY ES UN BUEN DÍA PARA MORIR."']
     },
     {
-      nombre: 'Jhoselyn Cruz',
+      nombre: 'Jhoselyn',
+      apodo: '',
+      apellido: 'Cruz',
       image: 'jhoselyn_pose',
       info: {
         edad: 17,
         peso: 67,
-        altura: 161,
+        altura: 161
       },
-      comentarios: [
-        'ANTES QUE ME APAGUE SE APAGA EL SOL',
-      ]
+      comentarios: ['"ANTES QUE ME APAGUE SE APAGA EL SOL."']
     },
     {
-      nombre: 'Jairo Molina',
+      nombre: 'Jairo',
+      apodo: 'El terry',
+      apellido: 'Molina',
       image: 'jairo_pose',
       info: {
         edad: 15,
         peso: 52,
-        altura: 163,
+        altura: 163
       },
-      comentarios: [
-        'QUIEN TIENE MIEDO A LA MUERTE QUE NO NASCA',
-      ]
+      comentarios: ['"QUIEN TIENE MIEDO A LA MUERTE QUE NO NAZCA."']
     }
   ])
 
   return (
-    <article className="flex justify-center items-center flex-col lg:gap-20 font-Friends" id='boxeadores'>
-      <div className="flex flex-col lg:text-6xl font-bold w-fit lg:gap-4 gap-1 text-4xl">
+    <article
+      className="flex justify-center items-center flex-col lg:gap-20 font-Friends"
+      id="boxeadores"
+    >
+      <div className="flex flex-col 2xl:text-6xl xl:text-5xl font-bold w-fit lg:gap-4 gap-1 text-3xl justify-center items-center">
         <h1 className="text-white">CONOCE A NUESTROS</h1>
-        <h1 className="text-[#ED0505] lg:text-7xl text-5xl text-center">
-          BOXEADORES
+        <h1 className="text-[#ED0505] 2xl:text-7xl xl:text-6xl text-[38px] text-center">
+          REPRESENTANTES
         </h1>
       </div>
       <div className="lg:w-[70%] w-full">
@@ -77,7 +82,7 @@ export const Testimonios = () => {
                   ))}
                 </div>
                 <div className="flex justify-center items-center flex-col">
-                  <figure className='max-w-[300px] lg:max-w-full'>
+                  <figure className="max-w-[300px] lg:max-w-full">
                     <img
                       src={`/${boxer.image}.png`}
                       alt=""
@@ -85,9 +90,11 @@ export const Testimonios = () => {
                       draggable="false"
                     />
                   </figure>
-                  <span className="lg:text-6xl text-4xl font-bold text-white -rotate-2 font-Friends">
-                    {boxer.nombre.toUpperCase()}
-                  </span>
+                  <div className="2xl::text-6xl xl:text-5xl text-4xl font-bold text-white -rotate-2 font-Friends gap-2 flex justify-center items-center flex-wrap w-[450px]">
+                    <span>{boxer.nombre.toUpperCase()}</span>
+                    <span className='text-[#ed0505]'>{boxer.apodo.toUpperCase()}</span>
+                    <span>{boxer.apellido.toUpperCase()}</span>
+                  </div>
                   <figure className="max-w-[120px] mt-4">
                     <img
                       src="/peru_flag.png"
